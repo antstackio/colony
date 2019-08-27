@@ -2324,18 +2324,21 @@ header .logo a {
 	padding: 10.2rem 0 6rem;
 	text-align: center;
 	color: #FFFFFF;
+	font-size: 3rem;
+    line-height: 1.5;
 }
 
 #subscribe .subscribe-content {
 	max-width: 780px;
 }
 
-#subscribe #mc-form {
-	margin-top: 4.2rem;
-	margin-bottom: 0;
-	text-align: center;
+#subscribe h4 {
+	font-size: 4rem;
 }
 
+#subscribe .fa{
+	font-size: 5rem;
+}
 #subscribe #mc-form input[type="email"] {
 	width: 100%;
 	text-align: left;
