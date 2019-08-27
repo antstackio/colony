@@ -77,7 +77,7 @@ body {
 	font-family: "roboto-regular", sans-serif;
 	font-size: 1.6rem;
 	line-height: 3rem;
-	color: #292c35;
+	color: #666666;
 }
 
 /* -------------------------------------------------------------------
@@ -501,7 +501,7 @@ img.pull-left {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #151515;
+	background: #001835;
 	z-index: 900;
 	height: 100%;
 	width: 100%;
@@ -529,7 +529,7 @@ img.pull-left {
 	width: 60px;
 	-webkit-animation: rotate .9s infinite linear;
 	animation: rotate .9s infinite linear;
-	border: 10px solid #FFFFFF;
+	border: 10px solid #F24545;
 	border-right-color: transparent;
 	border-radius: 50%;
 }
@@ -1354,16 +1354,25 @@ header .logo a {
  * ------------------------------------------------------------------- */
 #intro {
 	position: relative;
-	background-image: url(../images/intro-bg.jpg);
+	background: #fff;
+	/* background-image: url(../images/intro-bg.jpg); */
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	text-align: center;
-	padding-top: 15.6rem;
-	overflow: hidden;
+    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#intro > *{
+	position: relative;
+	z-index: 3;
+
 }
 
 #intro .intro-content {
@@ -1374,17 +1383,18 @@ header .logo a {
 #intro h4 {
 	text-transform: uppercase;
 	letter-spacing: .3rem;
+	    font-size: 3vw;
 	color: #001835;
 	margin-bottom: .6rem;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 #intro p {
-	margin: 15px 0 50px;
+	margin: 0 0 50px;
 	font-size: 3rem;
 	line-height: 1.267;
 	color: #001835;
-	padding: 0 12%;
+	padding: 0 33% 0 0;
 	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -1405,10 +1415,14 @@ header .logo a {
 }
 
 #intro img {
-	vertical-align: bottom;
-	max-width: 840px;
 	width: 100%;
-	box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+	margin: auto;
+	display: block;
+	position: absolute;
+    left: 0;
+    right: 0;
+	bottom: 0;
+	z-index: 0;
 }
 
 .shadow-overlay {
@@ -1697,6 +1711,7 @@ header .logo a {
 	}
 
 }
+
 
 @media only screen and (max-width:900px) {
 	#infos {
@@ -2305,7 +2320,7 @@ header .logo a {
  *
  * ------------------------------------------------------------------- */
 #subscribe {
-	background: #00132b;
+	background: #F24545;
 	padding: 10.2rem 0 6rem;
 	text-align: center;
 	color: #FFFFFF;
@@ -2324,12 +2339,24 @@ header .logo a {
 #subscribe #mc-form input[type="email"] {
 	width: 100%;
 	text-align: left;
-	color: rgba(255, 255, 255, 0.7);
-	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+#subscribe #mc-form input[type="email"]::-webkit-input-placeholder {
+  color: rgba(255,255,255,.8);
+}
+
+#subscribe #mc-form input[type="email"]:-ms-input-placeholder {
+  color: rgba(255,255,255,.8);
+}
+
+#subscribe #mc-form input[type="email"]::placeholder {
+  color: rgba(255,255,255,.8);
 }
 
 #subscribe #mc-form input[type="email"]:focus {
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.3);
 	color: white;
 }
 
@@ -2337,11 +2364,13 @@ header .logo a {
 	margin: 0;
 	width: 100%;
 	background: #FFFFFF;
+	border: solid 2px #fff
 }
 
 #subscribe #mc-form .button:hover,
 #subscribe #mc-form .button:focus {
 	background: #F24545;
+	color: #fff;
 }
 
 #subscribe #mc-form label {
@@ -2479,10 +2508,16 @@ footer a:active {
 	padding-top: 6.6rem;
 	padding-bottom: 6rem;
 }
-
+.fa{
+	color: #666666;
+}
+.footer-info-wrap{
+	    background: rgba(0,0,0,.5);
+    margin-bottom: 30px;
+}
 .footer-info a,
 .footer-info a:visited {
-	color: #292c35;
+	color: #666666;
 }
 
 .footer-info a:hover,
@@ -2619,4 +2654,36 @@ footer a:active {
 		border: none;
 	}
 
+}
+
+
+@media only screen and (max-width:767px) {
+	header .logo{
+		top: 0;
+	}
+	#intro{
+		text-align: center;
+		    padding: 0;
+	}
+		#intro h4{
+			font-size: 5vw;
+	}
+		#intro p{
+			padding: 0;
+			font-size: 2rem;
+	}
+	#intro img{
+		    width: auto;
+    max-width: 200%;
+    left: -100%;
+	}
+	.info-entry .info-entry-content{
+		    padding: 30px 15px !important;
+	}
+	.media-wrap{
+		margin-bottom: 0;
+	}
+	.row.footer-info{
+		padding: 0;
+	}
 }
