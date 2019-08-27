@@ -1368,6 +1368,7 @@ header .logo a {
     align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	padding: 100px 0 200px;
 }
 #intro > *{
 	position: relative;
@@ -2666,7 +2667,6 @@ footer a:active {
 	}
 	#intro{
 		text-align: center;
-		    padding: 0;
 	}
 		#intro h4{
 			font-size: 5vw;
