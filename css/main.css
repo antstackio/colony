@@ -2337,9 +2337,6 @@ header .logo a {
 	font-size: 4rem;
 }
 
-#subscribe .fa{
-	font-size: 5rem;
-}
 #subscribe #mc-form input[type="email"] {
 	width: 100%;
 	text-align: left;
@@ -2689,4 +2686,50 @@ footer a:active {
 	.row.footer-info{
 		padding: 0;
 	}
+}
+
+
+@media only screen and (min-width:767px) {
+.main-header .menu-toggle{
+    display: none;
+}
+nav#menu-nav-wrap {
+        visibility: visible;
+        transform: none;
+        opacity: 1;
+        left: 0;
+        width: auto;
+        background: transparent;
+        padding: 30px;
+        height: auto;
+}
+
+nav#menu-nav-wrap ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 !important;
+}
+
+nav#menu-nav-wrap ul li a{
+   color: #001835 !important;
+   text-transform: uppercase;
+   padding: 0 25px;
+   font-weight: 900;
+   font-size: 20px;
+   text-shadow: 2px 2px 3px rgba(0,0,0,.35);
+}
+
+nav#menu-nav-wrap h3 {
+    display: none;
+}
+
+
+}
+#subscribe .icon-phone-incoming{
+    font-size: 3vw;
+}
+@media only screen and (max-width:767px) {
+#subscribe .icon-phone-incoming{
+    font-size: 11vw;
+}
 }
